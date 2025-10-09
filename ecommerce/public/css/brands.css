@@ -1,0 +1,317 @@
+/* 🌟 Modern Section Layout */
+.brand-section {
+    background: linear-gradient(135deg, #1a1f3a 0%, #0f1729 100%);
+    color: #fff;
+    padding: 80px 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    margin-top: 60px;
+}
+
+.brand-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+    animation: pulse 8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+.brand-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #00d4ff 0%, #7b2ff7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #a0b4d4;
+    margin-bottom: 60px;
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 🎨 Brand Grid */
+.brand-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-items: center;
+    margin-bottom: 60px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.brand-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px 80px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.brand-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(123, 47, 247, 0.2));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+/* =============================
+   ✨ Quote Box Styling
+============================= */
+.quote-box {
+  text-align: left;
+  padding-left: 20px;
+  border-left: 4px solid #ff6f61;
+  margin-top: 25px;
+}
+
+.shopping-quote {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.5;
+  max-width: 700px;
+}
+
+.shopping-quote .highlight {
+  color: #ff6f61;
+  font-weight: 700;
+}
+
+.shopping-quote .tagline {
+  color: #4a4a4a;
+  font-weight: 500;
+}
+
+/* Optional fade-in animation */
+.quote-box {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.quote-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.brand-card:hover::before {
+    opacity: 1;
+}
+
+.brand-card:hover {
+    transform: translateY(-15px) scale(1.05);
+    border-color: rgba(0, 212, 255, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 212, 255, 0.3),
+                0 0 60px rgba(123, 47, 247, 0.2);
+}
+
+/* Logo Container with Fixed Design */
+.logo-container {
+    width: 130px;
+    height: 130px;
+    background: #ffffff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease;
+    padding: 15px;
+}
+
+.brand-card:hover .logo-container {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.logo-container::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+}
+
+.brand-card h5 {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 1;
+}
+
+/* 🎭 Brand Info Box - Glassmorphism */
+.brand-info {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(20px);
+    padding: 40px 35px;
+    border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3),
+                inset 0 0 20px rgba(255, 255, 255, 0.05);
+    transition: all 0.4s ease;
+    min-height: 300px;
+}
+
+.brand-info h4 {
+    font-size: 2rem;
+    background: linear-gradient(135deg, #00d4ff 0%, #7b2ff7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.brand-info p {
+    color: #cbd5e1;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.brand-info ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.brand-info ul li {
+    margin: 15px 0;
+    font-size: 1rem;
+    color: #e2e8f0;
+    padding-left: 35px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.brand-info ul li::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    color: #00d4ff;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    color: #000;
+    padding: 12px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+}
+
+.read-more:hover {
+    background: linear-gradient(135deg, #00b8e6 0%, #007799 100%);
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.5);
+}
+
+.placeholder-text {
+    color: #64748b;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2rem;
+    padding: 80px 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .brand-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .brand-card {
+        width: 160px;
+        height: 160px;
+        padding: 20px 15px;
+    }
+
+    .logo-container {
+        width: 100px;
+        height: 100px;
+    }
+
+    .brand-section {
+        padding: 50px 25px;
+    }
+}

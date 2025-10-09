@@ -1,0 +1,91 @@
+/* 🌟 Horizontal Deals Section */
+.deals-row-section {
+  background: #fff;
+  padding: 25px 20px;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.section-header h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.arrow-btn {
+  background: #eef1f6;
+  border: none;
+  font-size: 1.4rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  line-height: 1;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.arrow-btn:hover {
+  background: #dfe3ea;
+}
+
+/* Scrollable row */
+.deals-row {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.deals-row::-webkit-scrollbar {
+  height: 6px;
+}
+
+.deals-row::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 5px;
+}
+
+/* Deal Item Card */
+.deal-item {
+  flex: 0 0 180px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.deal-item img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.deal-item p {
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.deal-item span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #007600;
+}
+
+.deal-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
