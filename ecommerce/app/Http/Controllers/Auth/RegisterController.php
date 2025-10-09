@@ -15,20 +15,28 @@ class RegisterController extends Controller
         return view('register');
     }
 
-    // Handle form submit
+    // Handle registration (no bcrypt)
     public function register(Request $request)
     {
-   
+        // ✅ Basic validation
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:3|confirmed', // checks password_confirmation
+        ]);
 
+        // ✅ Create new user with plain password
         $user = User::create([
             'name'     => $request->name,
             'email'    => $request->email,
-            'password' => $request->password,
+            'password' => $request->password,  // ❗ plain password (no bcrypt)
             'role'     => 'customer',
         ]);
 
-        Auth::login($user); // auto login after registration
+        // ✅ Auto-login the new user
+        Auth::login($user);
 
-        return redirect('/')->with('success', 'Registration successful!');
+        // ✅ Redirect to home
+        return redirect('/home')->with('success', 'Registration successful!');
     }
 }

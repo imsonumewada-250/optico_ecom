@@ -176,7 +176,7 @@
         <p class="subtitle">Join us today! Please fill in the details</p>
 
         @if ($errors->any())
-            <div class="error-box">
+     <div class="error-box">
                 <ul>
                     @foreach ($errors->all() as $error)
                        <li>{{ $error }}</li>
