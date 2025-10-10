@@ -76,24 +76,6 @@
         </div>
     </div>
 
-    <!-- 💬 TESTIMONIALS -->
-    <section class="testimonials-section">
-        <h4 class="testimonials-title">What Our Customers Say</h4>
-        <div class="testimonials-grid">
-            <div class="testimonial">
-                <p>"Amazing quality and super fast delivery!"</p>
-                <strong>- Priya Sharma</strong>
-            </div>
-            <div class="testimonial">
-                <p>"Best e-commerce experience I've had so far."</p>
-                <strong>- Rahul Mehta</strong>
-            </div>
-            <div class="testimonial">
-                <p>"Customer support was extremely helpful."</p>
-                <strong>- Neha Patel</strong>
-            </div>
-        </div>
-    </section>
 </div>
 
 <!-- 🎬 JavaScript -->
@@ -208,6 +190,24 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
   </div>
 </section>
+    <!-- 💬 TESTIMONIALS -->
+    <section class="testimonials-section">
+        <h4 class="testimonials-title">What Our Customers Say</h4>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <p>"Amazing quality and super fast delivery!"</p>
+                <strong>- Priya Sharma</strong>
+            </div>
+            <div class="testimonial">
+                <p>"Best e-commerce experience I've had so far."</p>
+                <strong>- Rahul Mehta</strong>
+            </div>
+            <div class="testimonial">
+                <p>"Customer support was extremely helpful."</p>
+                <strong>- Neha Patel</strong>
+            </div>
+        </div>
+    </section>
 
 <!-- 🌍 Brand Showcase Section -->
 <section class="brand-section">
@@ -223,5 +223,8 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
   </div>
 </section>
+
+
+
 
 @endsection
